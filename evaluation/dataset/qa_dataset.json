@@ -1,0 +1,82 @@
+[
+  {
+    "id": "q1",
+    "question": "What is Retrieval-Augmented Generation (RAG)?",
+    "document_name": "rag_overview.pdf",
+    "target_page": 1,
+    "ground_truth_context": "Retrieval-Augmented Generation (RAG) is an AI framework that retrieves relevant documents from an external knowledge base to anchor large language model responses on verifiable facts.",
+    "ground_truth_answer": "RAG is an AI framework that enhances LLM responses by fetching relevant context from external document repositories to ensure factual accuracy."
+  },
+  {
+    "id": "q2",
+    "question": "Which embedding model is used for text vectorization in DocuRAG?",
+    "document_name": "docurag_spec.pdf",
+    "target_page": 2,
+    "ground_truth_context": "DocuRAG utilizes sentence-transformers with the all-MiniLM-L6-v2 model to compute 384-dimensional dense vector embeddings for text chunks.",
+    "ground_truth_answer": "DocuRAG uses the all-MiniLM-L6-v2 sentence-transformer model to generate 384-dimensional dense embeddings."
+  },
+  {
+    "id": "q3",
+    "question": "How does the recursive chunker handle page boundaries and overlap?",
+    "document_name": "docurag_spec.pdf",
+    "target_page": 3,
+    "ground_truth_context": "The PyMuPDF text processor extracts text per page. The recursive chunker slides over text with a target size of CHUNK_SIZE characters and CHUNK_OVERLAP characters, keeping page numbers intact in metadata.",
+    "ground_truth_answer": "It extracts text per page and uses sliding window character chunking with configurable overlap, preserving page-level metadata for every chunk."
+  },
+  {
+    "id": "q4",
+    "question": "What happens if no retrieved chunk passes the similarity threshold?",
+    "document_name": "docurag_spec.pdf",
+    "target_page": 4,
+    "ground_truth_context": "When all candidate search chunks fail to satisfy the SIMILARITY_THRESHOLD (default 0.30), the pipeline bypasses LLM synthesis and immediately returns an ungrounded indicator response.",
+    "ground_truth_answer": "The system bypasses LLM synthesis and explicitly states that the answer cannot be determined from the uploaded documents."
+  },
+  {
+    "id": "q5",
+    "question": "Which vector store engine is configured by default in DocuRAG?",
+    "document_name": "architecture.pdf",
+    "target_page": 1,
+    "ground_truth_context": "ChromaDB is the default persistent vector store engine implementation under the abstract BaseVectorStore interface.",
+    "ground_truth_answer": "ChromaDB is used as the default persistent vector database."
+  },
+  {
+    "id": "q6",
+    "question": "What is the maximum allowed PDF upload file size?",
+    "document_name": "docurag_spec.pdf",
+    "target_page": 1,
+    "ground_truth_context": "DocuRAG enforces a MAX_UPLOAD_SIZE_MB limit of 15 Megabytes per PDF upload to prevent backend resource exhaustion.",
+    "ground_truth_answer": "The maximum allowed upload size is 15 Megabytes (15MB)."
+  },
+  {
+    "id": "q7",
+    "question": "Which LLM providers can be configured via environment variables?",
+    "document_name": "architecture.pdf",
+    "target_page": 2,
+    "ground_truth_context": "The LLM factory interface supports dynamic provider selection between Google Gemini, OpenAI, and Groq via the LLM_PROVIDER variable in .env.",
+    "ground_truth_answer": "Google Gemini, OpenAI, and Groq are supported."
+  },
+  {
+    "id": "q8",
+    "question": "How are citations formatted in the LLM system prompt?",
+    "document_name": "prompt_guide.pdf",
+    "target_page": 1,
+    "ground_truth_context": "The system prompt instructs the model to cite facts strictly using the format [DocumentName, Page X].",
+    "ground_truth_answer": "Citations are formatted as [DocumentName, Page X]."
+  },
+  {
+    "id": "q9",
+    "question": "What stock price is listed for Acme Corporation in the 2026 Q3 report?",
+    "document_name": "docurag_spec.pdf",
+    "target_page": 5,
+    "ground_truth_context": "Unanswerable out-of-scope question example.",
+    "ground_truth_answer": "The answer cannot be determined from the uploaded documents."
+  },
+  {
+    "id": "q10",
+    "question": "What distance metric is configured for vector similarity search in ChromaDB?",
+    "document_name": "architecture.pdf",
+    "target_page": 3,
+    "ground_truth_context": "ChromaDB collection is initialized with hnsw:space set to cosine distance, mapping similarity scores from 0.0 to 1.0.",
+    "ground_truth_answer": "Cosine distance (hnsw:space: cosine) is configured."
+  }
+]

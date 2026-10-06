@@ -1,0 +1,91 @@
+{
+  "total_samples": 10,
+  "metrics_summary": {
+    "Retrieval Precision": 0.45,
+    "Context Recall": 0.9,
+    "Answer Relevance": 1.0,
+    "Faithfulness": 0.676
+  },
+  "sample_evaluations": [
+    {
+      "id": "q1",
+      "question": "What is Retrieval-Augmented Generation (RAG)?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.5714
+    },
+    {
+      "id": "q2",
+      "question": "Which embedding model is used for text vectorization in DocuRAG?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.8125
+    },
+    {
+      "id": "q3",
+      "question": "How does the recursive chunker handle page boundaries and overlap?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.4
+    },
+    {
+      "id": "q4",
+      "question": "What happens if no retrieved chunk passes the similarity threshold?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0
+    },
+    {
+      "id": "q5",
+      "question": "Which vector store engine is configured by default in DocuRAG?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.6667
+    },
+    {
+      "id": "q6",
+      "question": "What is the maximum allowed PDF upload file size?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.3333
+    },
+    {
+      "id": "q7",
+      "question": "Which LLM providers can be configured via environment variables?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.7143
+    },
+    {
+      "id": "q8",
+      "question": "How are citations formatted in the LLM system prompt?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.4286
+    },
+    {
+      "id": "q9",
+      "question": "What stock price is listed for Acme Corporation in the 2026 Q3 report?",
+      "retrieval_precision": 0.0,
+      "context_recall": 0.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0
+    },
+    {
+      "id": "q10",
+      "question": "What distance metric is configured for vector similarity search in ChromaDB?",
+      "retrieval_precision": 0.5,
+      "context_recall": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 0.8333
+    }
+  ]
+}
