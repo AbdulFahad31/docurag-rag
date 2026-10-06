@@ -14,21 +14,7 @@
 [ Grounded Answer + Citations ] ◄── [ LLM Provider (Gemini/OpenAI/Groq) ] ◄── [ Context Builder ] ◄────────────┘
 ```
 
-```mermaid
-graph TD
-    A[PDF Upload] --> B[PyMuPDF Page Extractor]
-    B --> C[Recursive Sliding-Window Chunker]
-    C --> D[SentenceTransformer all-MiniLM-L6-v2]
-    D --> E[ChromaDB Vector Store]
-    
-    F[User Question] --> G[Query Embedding]
-    G --> H[Top-K Similarity Search]
-    H --> I{Similarity >= Threshold?}
-    I -- No --> J[Return Unanswerable Message]
-    I -- Yes --> K[Build Structured Prompt with [Doc, Page] Metadata]
-    K --> L[LLM Provider: Gemini / OpenAI / Groq]
-    L --> M[Return Grounded Answer + Sources + Passages]
-```
+
 
 ---
 
